@@ -120,10 +120,10 @@ export default function Pokemon() {
         
       <div>
         <div className="mx-4 text-center ">
-        <Link href="/"  className="font-bold text-3xl border border-black bg-white py-4 px-2 rounded-xl my-10 pointer-events-none">
-
+        <Link href="/">
+          <button className="font-black text-3xl border border-black bg-white py-4 px-2 rounded-xl my-10 pointer-events-none">
             Game of Pokémemory
-         
+          </button>
            </Link>
           <h1 className="font-bold mb-4">
             Click some pokeball to view the pokémon who&apos;s behind it!
