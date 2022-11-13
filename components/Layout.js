@@ -67,12 +67,12 @@ export default function Pokemon() {
    const changeLevelFunction =()=>{
     setPokeLevel("MasterBall.png");
     restartFunction()
-    return fetchPokes();
+    return setPokesUrls(pokesUrls.sort(() => 0.5 - Math.random()));
   }
    const restartFunction =()=>{
     setOpenedCards([null])
     setOpened(false)
-    return fetchPokes();
+    return setPokesUrls(pokesUrls.sort(() => 0.5 - Math.random()));
   }
  
   const fetchPokes = async () => {
@@ -88,7 +88,7 @@ export default function Pokemon() {
         const response = await fetch(poke.url);
         const responsePoke = await response.json();
         const urlPokeFoto = responsePoke.sprites.front_default;
-        setPokesUrls((prevState) => [...prevState, urlPokeFoto, urlPokeFoto].sort(() => 0.5 - Math.random())
+        setPokesUrls((prevState) => [...prevState, urlPokeFoto].sort(() => 0.5 - Math.random())
         );
       });
 
@@ -131,15 +131,15 @@ export default function Pokemon() {
         </div>
       </div>
       
-    <div className="text-center pb-10 ">
+    <div className="text-center pb-10 md:mx-10 ">
      
-           {Matched ? <div className="absolute rounded-3xl mt-10 ml-40 md:ml-80 md:w-20 text-center text-white font-bold bg-green-500">OLEE</div> : null }
-           {notMatched ? <div className="absolute rounded-3xl mt-10 ml-40 md:ml-80 md:w-20 text-center text-white font-bold bg-red-500">CACA</div> : null }
+           {(Matched) ? (<div className="absolute rounded-3xl mt-10 ml-40 md:ml-80 md:w-20 text-center text-white font-bold bg-green-500">OLEE</div>) : (null) }
+           {(notMatched) ? (<div className="absolute rounded-3xl mt-10 ml-40 md:ml-80 md:w-20 text-center text-white font-bold bg-red-500">CACA</div>) : (null) }
       <div class="grid grid-cols-5 md:gap-y-4 relative border-4 rounded-xl border-black bg-white px-2 md:py-4 py-2 ">
         { (opened===true) ? (<div className="bg-green-500 py-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2   rounded-xl">
-            <p className="font-bold py-1">Nice! You just completed the game.</p>
-            <p className="font-bold pb-2">What do you want to do?</p>
-            <button className="bg-white rounded px-1" onClick={() => changeLevelFunction()}>Change Pokeball</button>
+            <p className="text-black py-1">Nice! You just completed the game.</p>
+            <p className="text-black font-bold pb-2">What do you want to do?</p>
+            <button className="bg-white text-black rounded px-1" onClick={() => changeLevelFunction()}>Change Pokeball</button>
             <br></br>
             <button className="bg-blue-500 my-2 rounded px-1" onClick={()=> restartFunction() }>Restart</button>
             </div>) : (null)

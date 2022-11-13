@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function Patata() {
+export default function Nav() {
 
   return (
     <div className="bg-gray-400 min-h-screen">
