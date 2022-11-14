@@ -12,6 +12,6 @@ timing of opened pokeball and why this value turns null after the ALERT...
 -just print  20 pokeballs not 40 xd
 
 toDO:
- -Shoudn't pick more than 2 pokeballs...!!!!!!!!!!!!!!!!
+ -Shoudn't pick more than 2 pokeballs...!!!!!!!!!!!!!!!! howwwww
 
  -music?

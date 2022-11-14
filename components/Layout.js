@@ -33,7 +33,9 @@ export default function Pokemon() {
       setSelectPoke(url)
       setSelectPoke(null);
       setMatched(true);
-    return setTimeout(()=> setMatched(false), 1000)
+    
+
+    return setTimeout(()=> setMatched(false), 200)
   }
   
   const openedFunction= () => {
@@ -45,13 +47,14 @@ export default function Pokemon() {
       setOpenedCards(openedCards.concat(index))
       setSelectPoke(null)
       setSelectedIndex(null)
+      currentOpenedCards.splice(openedCards.length -1, 1)
+    
     
     setTimeout(() => {
-      currentOpenedCards.splice(openedCards.length -1, 1)
       setOpenedCards(currentOpenedCards)  //Here all my opened card tuned off ;(( maybe select last 2 pokes selecteds
       setNotMatched(true)
-      return setTimeout(()=> setNotMatched(false), 600)
-    },600 )
+      return setTimeout(()=> setNotMatched(false),100)
+    },100 )
     
   }
 
@@ -88,7 +91,7 @@ export default function Pokemon() {
         const response = await fetch(poke.url);
         const responsePoke = await response.json();
         const urlPokeFoto = responsePoke.sprites.front_default;
-        setPokesUrls((prevState) => [...prevState, urlPokeFoto, urlPokeFoto].sort(() => 0.5 - Math.random())
+        setPokesUrls((prevState) => [...prevState,  urlPokeFoto].sort(() => 0.5 - Math.random())
         );
       });
 
