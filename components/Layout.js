@@ -142,8 +142,10 @@ export default function Pokemon() {
             <p className="text-black font-bold pb-2">What do you want to do?</p>
             <button className="bg-white text-black rounded px-1" onClick={() => changeLevelFunction()}>Change Pokeball</button>
             <br></br>
-            <button className="bg-blue-500 my-2 rounded px-1" onClick={()=> restartFunction() }>Restart</button>
-            </div>) : (null)
+            <button className="bg-blue-500 my-2 rounded px-1" onClick={()=> restartFunction() }>Restart</button> 
+            <br></br>
+            <Link href="/playing" className="bg-gray-400 my-2 text-black rounded px-1">Home</Link>
+            </div> ) : (null)
            }{pokesUrls
           .map((pokeUrl, index) => (
             <div key={index} className="flex justify-center">

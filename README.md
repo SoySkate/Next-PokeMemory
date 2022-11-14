@@ -10,8 +10,8 @@ timing of opened pokeball and why this value turns null after the ALERT...
 -posibility to change pokeballs (different) Según dificultad por ejemplo..
 - why the restart function is invalid?Because I fetch this but I duplicate the fetch"""
 -just print  20 pokeballs not 40 xd
+-Shoudn't pick more than 2 pokeballs...!!!!!!!!!!!!!!!
 
 toDO:
- -Shoudn't pick more than 2 pokeballs...!!!!!!!!!!!!!!!! howwwww
-
- -music?
+ -button home
+ -music? 
