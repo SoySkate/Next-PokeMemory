@@ -140,11 +140,11 @@ export default function Pokemon() {
         { (opened===true) ? (<div className="bg-green-500 py-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2   rounded-xl">
             <p className="text-black py-1">Nice! You just completed the game.</p>
             <p className="text-black font-bold pb-2">What do you want to do?</p>
-            <button className="bg-white text-black rounded px-2" onClick={() => changeLevelFunction()}>Change Pokeball</button>
+            <button className="bg-white text-black rounded px-2 my-2" onClick={() => changeLevelFunction()}>Change Pokeball</button>
             <br></br>
-            <button className="bg-blue-500 my-4 rounded px-2" onClick={()=> restartFunction() }>Restart</button> 
+            <button className="bg-blue-500 my-3 font-bold rounded px-2" onClick={()=> restartFunction() }>Restart</button> 
             <br></br>
-            <Link href="/"><button className="bg-black my-4 text-white rounded px-2">Home</button></Link>
+            <Link href="/"><button className="bg-black my-3 text-white rounded px-2">Home</button></Link>
             </div> ) : (null)
            }{pokesUrls
           .map((pokeUrl, index) => (
