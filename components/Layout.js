@@ -72,7 +72,7 @@ export default function Pokemon() {
     return setPokesUrls(pokesUrls.sort(() => 0.5 - Math.random()));
   }
    const restartFunction =()=>{
-    setOpenedCards(openedCards.length = 0)
+    setOpenedCards([])
     setOpened(false)
     return setPokesUrls(pokesUrls.sort(() => 0.5 - Math.random()));
   }
