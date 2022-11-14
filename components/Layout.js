@@ -35,7 +35,7 @@ export default function Pokemon() {
       setMatched(true);
     
 
-    return setTimeout(()=> setMatched(false), 200)
+    return setMatched(false)
   }
   
   const openedFunction= () => {
@@ -53,8 +53,8 @@ export default function Pokemon() {
     setTimeout(() => {
       setOpenedCards(currentOpenedCards)  //Here all my opened card tuned off ;(( maybe select last 2 pokes selecteds
       setNotMatched(true)
-      return setTimeout(()=> setNotMatched(false),100)
-    },100 )
+      return setNotMatched(false)
+    },200 )
     
   }
 
@@ -133,12 +133,11 @@ export default function Pokemon() {
           </h1>
         </div>
       </div>
-      
-    <div className="text-center pb-10 md:mx-10 ">
      
-           {(Matched) ? (<div className="absolute rounded-3xl mt-10 ml-40 md:ml-80 md:w-20 text-center text-white font-bold bg-green-500">OLEE</div>) : (null) }
-           {(notMatched) ? (<div className="absolute rounded-3xl mt-10 ml-40 md:ml-80 md:w-20 text-center text-white font-bold bg-red-500">CACA</div>) : (null) }
-      <div class="grid grid-cols-5 md:gap-y-4 relative border-4 rounded-xl border-black bg-white px-2 md:py-4 py-2 ">
+    <div className="text-center pb-10 md:mx-10 ">
+    {/* {(Matched) ? (<div className="rounded-3xl mt-10 ml-40 md:ml-80 md:w-20 text-center text-white font-bold bg-green-500">OLEE</div>) : (null) }
+           {(notMatched) ? (<div className="rounded-3xl mt-10 ml-40 md:ml-80 md:w-20 text-center text-white font-bold bg-red-500">CACAaaa</div>) : (null) } */}
+      <div id="color" class="grid grid-cols-5 md:gap-y-4 relative border-4 rounded-xl border-black bg-white px-2 md:py-4 py-2 ">
         { (opened===true) ? (<div className="bg-green-500 py-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2   rounded-xl">
             <p className="text-black py-1">Nice! You just completed the game.</p>
             <p className="text-black font-bold pb-2">What do you want to do?</p>
