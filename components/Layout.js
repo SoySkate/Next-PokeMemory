@@ -91,7 +91,7 @@ export default function Pokemon() {
         const response = await fetch(poke.url);
         const responsePoke = await response.json();
         const urlPokeFoto = responsePoke.sprites.front_default;
-        setPokesUrls((prevState) => [...prevState,  urlPokeFoto].sort(() => 0.5 - Math.random())
+        setPokesUrls((prevState) => [...prevState, urlPokeFoto, urlPokeFoto].sort(() => 0.5 - Math.random())
         );
       });
 
