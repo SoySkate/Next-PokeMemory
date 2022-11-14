@@ -33,13 +33,12 @@ export default function Pokemon() {
       setSelectPoke(url)
       setSelectPoke(null);
       setMatched(true);
-    
 
     return setMatched(false)
   }
   
   const openedFunction= () => {
-    if (openedCards.length === 39){
+    if (openedCards.length === 39 ){
        return setOpened(true)
     }
    }
@@ -73,7 +72,7 @@ export default function Pokemon() {
     return setPokesUrls(pokesUrls.sort(() => 0.5 - Math.random()));
   }
    const restartFunction =()=>{
-    setOpenedCards([null])
+    setOpenedCards(openedCards.length = 0)
     setOpened(false)
     return setPokesUrls(pokesUrls.sort(() => 0.5 - Math.random()));
   }
