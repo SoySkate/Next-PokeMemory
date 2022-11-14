@@ -144,7 +144,7 @@ export default function Pokemon() {
             <br></br>
             <button className="bg-blue-500 my-4 rounded px-2" onClick={()=> restartFunction() }>Restart</button> 
             <br></br>
-            <Link href="/" className="bg-black my-4 text-white rounded px-2">Home</Link>
+            <Link href="/"><button className="bg-black my-4 text-white rounded px-2">Home</button></Link>
             </div> ) : (null)
            }{pokesUrls
           .map((pokeUrl, index) => (
